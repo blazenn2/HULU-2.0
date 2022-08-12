@@ -10,7 +10,7 @@ import HeaderItem from "./HeaderItem";
 
 const Header = () => {
     return (
-        <header className="flex justify-between items-center flex-col xl:flex-row">
+        <header className="flex justify-between items-center flex-col xl:flex-row px-4">
             <div className="flex lg:space-x-4 space-x-4">
                 <HeaderItem title={"HOME"} Icon={HomeIcon} />
                 <HeaderItem title={"TRENDING"} Icon={LightningBoltIcon} />
