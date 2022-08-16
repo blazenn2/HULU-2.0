@@ -1,10 +1,11 @@
 import { ThumbUpIcon } from "@heroicons/react/outline";
+import { forwardRef } from "react";
 
-const Thumbnail = ({ data }) => {
+const Thumbnail = forwardRef(({ data }, ref) => {
     const BASE_URL = 'https://image.tmdb.org/t/p/original';
     console.log(data);
     return (
-        <div className="group cursor-pointer">
+        <div ref={ref} className="group cursor-pointer">
             <div>
                 <img src={`${BASE_URL}${data.backdrop_path}`} height={1080} width={1920} className="group-hover:scale-105 ease-out-in duration-300" />
             </div>
@@ -21,6 +22,6 @@ const Thumbnail = ({ data }) => {
             </div>
         </div>
     )
-}
+})
 
 export default Thumbnail
